@@ -1,10 +1,23 @@
+/* let questionsDB = [];
+let currentIndex = 0;
+
+fetch(" .php") //here insert the php file name. example "list.php"
+  .then(response => response.json())
+  .then(data => {
+    questionsDB = data;
+    loadQuestion(); // start the quiz after loading questions
+  })
+*/
+
+// remove lines 13-18 when you activate the above code ^ 
 let questionsDB = [
   { question: "Python is a type of snake?", answer: "yes" },
   { question: "Is the earth flat?", answer: "no" },
   { question: "2 + 2 equal 5?", answer: "no" }
 ];
-
 let currentIndex = 0;
+
+/////////
 
 function loadQuestion() {
   if (currentIndex >= questionsDB.length) {
