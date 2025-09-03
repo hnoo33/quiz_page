@@ -1,0 +1,90 @@
+body {
+  font-family: 'Arial', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background: linear-gradient(135deg, #ff9ff3, #feca57, #48dbfb, #1dd1a1);
+  background-size: 300% 300%;
+  animation: gradientBG 8s ease infinite;
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.quiz-card {
+  background: white;
+  border-radius: 30px;
+  padding: 40px;
+  text-align: center;
+  width: 350px;
+  box-shadow: 10px 10px 0px #333;
+  position: relative;
+  overflow: hidden;
+}
+
+.quiz-card::before,
+.quiz-card::after {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.2;
+}
+
+.quiz-card::before {
+  width: 150px;
+  height: 150px;
+  background: #ff6b6b;
+  top: -40px;
+  left: -40px;
+}
+
+.quiz-card::after {
+  width: 200px;
+  height: 200px;
+  background: #54a0ff;
+  bottom: -60px;
+  right: -60px;
+}
+
+h1 {
+  font-size: 20px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+button {
+  margin: 10px;
+  padding: 15px 30px;
+  font-size: 18px;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+button.yes {
+  background: #1dd1a1;
+  color: white;
+  box-shadow: 5px 5px 0px #10ac84;
+}
+
+button.no {
+  background: #ff6b6b;
+  color: white;
+  box-shadow: 5px 5px 0px #c0392b;
+}
+
+button:hover {
+  transform: translateY(-3px);
+}
+
+#feedback {
+  margin-top: 15px;
+  font-weight: bold;
+  color: #333;
+}
